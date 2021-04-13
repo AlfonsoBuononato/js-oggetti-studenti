@@ -5,7 +5,9 @@
 
 $(document).ready(function(){
 
-    //1. ESERCIZIO
+    /* 
+    * 1. ESERCIZIO
+    */
 
     //CREARE UN OGGETTO ARRAY CONTENENTE LE PROPRIETA NOME COGNOME ETA DELLO STUDENTE 
 
@@ -20,11 +22,13 @@ $(document).ready(function(){
         console.log(key)
     } */
 
-    //2. ESERCIZIO
+    /* 
+    *  2. ESERCIZIO
+    */
 
     //CREARE UN ARRAY DI OGGETTI.
     
-/*     var studenti = [
+    var studenti = [
         {
             nome : "alfonso",
             cognome : "buononato",
@@ -40,12 +44,44 @@ $(document).ready(function(){
             cognome : "vitale",
             eta : 49,
         }
-    ]
+    ];
 
+    /* 
+    ** 3. ESERCIZIO 3°
+    */
+
+    //DATI STUDENTE DA INSERIRE CON RELATIVE VALIDAZIONI
+    var nomeValidato = prompt("inserisci il tuo nome");
+    //VALIDAZIONE NOME
+    while(! isNaN(nomeValidato)){
+        var nomeValidato = prompt("devi inserire il tuo nome");
+    }
+
+    var cognomeValidato = prompt("inserisci il tuo cognome");
+    //VALIDAZIONE COGNOME
+    while(! isNaN(cognomeValidato)){
+        var cognomeValidato = prompt("devi inserire il tuo cognome");
+    }
+
+    var etaValidata = parseInt(prompt("devi inserire la tua età"));
+    //VALIDAZIONE ETA
+    while(isNaN(etaValidata)){
+        var etaValidata = prompt("devi inserire la tua età");
+    }
+    // OGGETTO DA AGGIUNGERE NELL ARRAY DI OGGETTI STUDENTI
+    var studenteDaAggiungere ={
+        nome : nomeValidato,
+        cognome : cognomeValidato,
+        eta : etaValidata,
+    }
+    
+    studenti.push(studenteDaAggiungere)
+
+    // STAMPARE ATTRAVERSO UN CICLO FOR IL NOME E IL COGNOME CONTENUTO NEGLI OGGETTI
     for(i = 0; i < studenti.length; i++){
         var studente = studenti[i];
-        console.log(studente.nome + " " + studente.cognome );
-    } */
+        console.log(studente.nome + " " + studente.cognome + " " + studente.eta);
+    } 
 
 
 
