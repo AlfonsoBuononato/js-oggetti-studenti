@@ -19,7 +19,7 @@ $(document).ready(function(){
     
     //STAMPARE ATTRAVERSO UN CICLO FOR LE PROPRIETA DELL OGGETTO
     /* for(var key in studenti){
-        console.log(key)
+        console.log(key + ": " + studenti[key])
     } */
 
     /* 
